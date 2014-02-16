@@ -1,0 +1,17 @@
+<CAN>pxesplash.lss
+default menu.c32
+prompt 0
+
+MENU TITLE Legacy pxelinux.0 boot menu
+
+LABEL Boot local system
+MENU default
+LOCALBOOT 0
+TIMEOUT 600
+
+MENU SEPARATOR
+
+LABEL vSphere ESXi Builds
+MENU LABEL vSphere ESXi Builds
+KERNEL menu.c32
+APPEND pxelinux.cfg/vsphere

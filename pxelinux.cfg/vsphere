@@ -1,0 +1,19 @@
+DEFAULT menu.c32
+MENU TITLE ESXi 5.5 Boot Menu
+NOHALT 1
+PROMPT 0
+TIMEOUT 80
+
+LABEL Manual ESXi 5.5 Install
+  MENU LABEL ESXi5.5 manual install
+  KERNEL esxi55-install/mboot.c32
+  APPEND -c esxi55-install/boot.cfg
+
+LABEL Kickstarted ESXi 5.5 ESXi1
+  MENU LABEL ESXi5.5 kickstart ESXi1
+  KERNEL esxi55-install/mboot.c32
+  APPEND -c esxi55-install/boot.cfg pxebooting ks=http://192.168.0.100/esxi55ks.cfg?hostname=esxi1.mylab.local
+
+LABEL hddboot
+  LOCALBOOT 0x80
+  MENU LABEL ^Boot from local disk

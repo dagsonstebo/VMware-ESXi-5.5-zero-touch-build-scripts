@@ -1,1 +1,8 @@
-VMware vSphere 5.5 automated builds.
+VMware vSphere 5.5 automated build scripts.
+
+/esxi55-ks/esxi1.cfg		Example host specific configuration file. Refer to this in the pxelinux.cfg menu.
+/esxi55-scripts/esxi55ks.cfg	Main build script. Place in HTTP folder.
+/esxi55-scripts/ksorig.cfg	Original vanilla kickstart file, attached for reference only.
+/pxelinux.cfg/default		Default pxelinux.cfg menu file pointing to vsphere menu file. Refer to pxelinux PXE configuration.
+/pxelinux.cfg/vsphere		vSphere automated build configuration, referred to from default pxelinux file above.
+
